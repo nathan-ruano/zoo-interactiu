@@ -14,24 +14,46 @@
 
   <main>
     <section class="zoo-grid">
-      <div class="animal">
-        <img src="images/leon.avif" alt="Leó">
+      <div class="animal" data-habitat="Savana africana" data-dieta="Carnívor" data-conservacio="Vulnerable" data-curiositat="Els lleons poden arribar a córrer fins a 80 km/h en distàncies curtes.">
+        <div class="animal-image-container">
+          <img src="images/leon.avif" alt="Lleó">
+        </div>
         <h2>Lleó</h2>
         <p>El rei de la jungla.</p>
       </div>
-      <div class="animal">
-        <img src="images/pinguino.webp" alt="Pingüí">
+      <div class="animal" data-habitat="Antàrtida" data-dieta="Peixos i crustacis" data-conservacio="Risc mínim" data-curiositat="Els pingüins emperador poden submergir-se fins a 500 metres de fondària.">
+        <div class="animal-image-container">
+          <img src="images/pinguino.webp" alt="Pingüí">
+        </div>
         <h2>Pingüí</h2>
         <p>Viu al fred i neda molt bé.</p>
       </div>
-      <div class="animal">
-        <img src="images/tigre.jpg" alt="Tigre">
+      <div class="animal" data-habitat="Jungles d'Àsia" data-dieta="Carnívor" data-conservacio="En perill" data-curiositat="Les ratlles de cada tigre són úniques, com les empremtes dactilars humanes.">
+        <div class="animal-image-container">
+          <img src="images/tigre.jpg" alt="Tigre">
+        </div>
         <h2>Tigre</h2>
         <p>Conegut pel seu bell estrí.</p>
       </div>
       <!-- Afegir més animals aquí -->
     </section>
   </main>
+
+  <!-- Ventana emergente -->
+  <div class="modal-overlay" id="animal-modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <img class="modal-image" id="modal-image" src="" alt="">
+      <h2 id="modal-title"></h2>
+      <div class="animal-details">
+        <p><strong>Hàbitat:</strong> <span id="modal-habitat"></span></p>
+        <p><strong>Dieta:</strong> <span id="modal-dieta"></span></p>
+        <p><strong>Estat de conservació:</strong> <span id="modal-conservacio"></span></p>
+        <p><strong>Curiositat:</strong> <span id="modal-curiositat"></span></p>
+      </div>
+      <p id="modal-description"></p>
+    </div>
+  </div>
 
   <footer>
     <button id="toggle-layout">Canvia Layout</button>
